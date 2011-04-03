@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}About the EMS Excellence Foundation{% endblock %}
+{% block sidebar %}
+<ul>
+{% if page == "acknowledgements" %}<li><span>Acknowledgements</span></li>{% else %}<li><a href="/about/acknowledgements/"{% if section == "acknowledgements" %} class="current_section"{% endif %}>Acknowledgements</a></li>{% endif %}
+{% if page == "our people" %}<li><span>Our People</span></li>{% else %}<li><a href="/about/people/"{% if section == "our people" %} class="current_section"{% endif %}>Our People</a></li>{% endif %}
+{% if page == "our plan" %}<li><span>Our Plan</span></li>{% else %}<li><a href="/about/plan/"{% if section == "our plan" %} class="current_section"{% endif %}>Our Plan</a></li>{% endif %}
+{% if page == "our philosophy" %}<li><span>Our Philosophy</span></li>{% else %}<li><a href="/about/philosophy/"{% if section == "our philosophy" %} class="current_section"{% endif %}>Our Philosophy</a></li>{% endif %}
+{% if page == "our policies" %}<li><span>Our Policies</span></li>{% else %}<li><a href="/about/policies/"{% if section == "our policies" %} class="current_section"{% endif %}>Our Policies</a></li>{% endif %}
+{% if page == "our performance" %}<li><span>Our Performance</span></li>{% else %}<li><a href="/about/performance/"{% if section == "our performance" %} class="current_section"{% endif %}>Our Performance</a></li>{% endif %}
+</ul>
+{% endblock %}
+{% block content %}
+
+{% endblock %}

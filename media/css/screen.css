@@ -1,0 +1,172 @@
+@import url(reset.css);
+
+body
+{
+	background:#FFF url(../images/background.png) repeat-y top right;
+	font:.9em/1.4 "Helvetica Neue",Arial,Helvetica,sans-serif;
+}
+
+#header
+{
+	background:url(../images/header_background.png);
+	height:119px;
+}
+
+h1 a:link, h1 a:visited, #home
+{
+    display:block;
+	background:url(../images/h1.png) no-repeat;
+	height:71px;
+}
+
+#home, h1 a:hover {
+background:url(../images/h1_hover.png) no-repeat;
+}
+
+#header li
+{
+	float:left;
+	margin-left:20px;
+}
+
+#header li a:link,#header li a:visited
+{
+	height:48px;
+}
+
+#header li a:hover,#header li.current_page
+{
+	border-bottom:4px solid #FFF;
+	height:44px;
+}
+
+#header li a span,.current_page span, #contact_info span
+{
+	display:none;
+}
+
+#about_the_foundation,#about_the_foundation:link,#about_the_foundation:visited
+{
+	background:url(../images/link_about_foundation.png);
+	display:block;
+	width:192px;
+}
+
+#definition_of_excellence:link,#definition_of_excellence:visited
+{
+	background:url(../images/link_definition_of_excellence.png);
+	display:block;
+	width:217px;
+}
+
+#ems_census:link,#ems_census:visited
+{
+	background:url(../images/link_ems_census.png);
+	display:block;
+	width:111px;
+}
+
+#ems_improvement:link,#ems_improvement:visited
+{
+	background:url(../images/link_ems_improvement.png);
+	display:block;
+	width:164px;
+}
+
+#contact_info {
+height:54px;
+width:195px;
+background:url(../images/contact_info.png);
+top:0;
+left:745px;
+position:absolute;
+}
+
+/** sidebar **/
+
+#sidebar
+{
+	background:url(../images/sidebar_background.png) repeat-x;
+	min-height:600px;
+	padding:20px;
+	position:absolute;
+	right:0;
+	width:160px;
+}
+
+#sidebar a:link, #sidebar a:visited,#sidebar li span {
+color:#FFF;
+}
+
+#sidebar li span {
+font-weight:bold
+}
+
+#sidebar a.current_section:link, #sidebar a.current_section:visited {
+font-weight:bold
+}
+
+h1 span,#header a span
+{
+	display:none;
+}
+
+h2,h3,p
+{
+	margin-bottom:10px;
+}
+
+/** headers **/
+
+h2 {
+font-size:2em
+}
+
+h3
+{
+	font-size:1.5em;
+	font-weight:700;
+}
+
+/** content **/
+
+#content, #footer {
+	padding:20px;
+}
+
+#content
+{
+	background:url(../images/rounded_right_corner_next_to_header_and_sidebar.png) top right no-repeat;
+	margin-right:200px;
+}
+
+#content a:hover, #sidebar a:hover
+{
+	text-decoration:none; 
+}
+
+.chart {
+float:left;
+margin:0 10px 10px 0;
+}
+
+/** lists **/
+
+ul.general {
+padding-left:30px;
+list-style:square;
+color:#0c71bf;
+}
+
+#ask_yourself {
+font-size:1.3em;
+font-family:serief;
+}
+
+/** footer **/
+
+#footer {
+clear:left;
+border-top:1px solid #80bae6;
+font-size:.8em;
+}

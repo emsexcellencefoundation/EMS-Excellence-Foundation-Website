@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+<title>{% block title %}{% endblock %}</title>
+<link rel="stylesheet" media="screen" href="/media/css/screen.css" type="text/css" /> 
+<meta name="google-site-verification" content="UDCZc3_ONITpAtZoVwKwAsO-MGWz75L6-91-ZjjABmw" />
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-22485594-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+<body>
+<div id="header">
+{% if page == 'home' %}<h1 id="home"><span>EMS Census</span></h1>{% else %}<h1><a href="/"><span>EMS Census</span></a></h1>{% endif %}
+<ul>
+    {% if page == 'about' %}<li id="about_the_foundation" class="current_page"><span>About the Foundation</span></li>{% else %}<li><a id="about_the_foundation" href="/about"><span>About the Foundation</span></a></li>{% endif %}
+    <li><a id="definition_of_excellence" href="http://definitionofexcellence.org"><span>Definition of Excellence</span></a></li>
+    <li><a id="ems_census" href="http://emscensus.org"><span>EMS Census</span></a></li>
+        <li><a id="ems_improvement" href="http://emsimprovement.org"><span>EMS Improvement</span></a></li>
+</ul>
+</div>
+<div id="sidebar">
+{% block sidebar %}
+
+{% endblock %}
+</div>
+<div id="content">
+{% block content %}
+
+{% endblock %}
+</div>
+<div id="footer">
+Text is released under the <a rel="license" href="http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a>.
+</div>
+<!-- Piwik --> 
+<script type="text/javascript"> 
+/* <![CDATA[ */
+var pkBaseURL = (("https:" == document.location.protocol) ? "https://stats.emsexcellence.org/" : "http://stats.emsexcellence.org/");
+document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+/* ]]> */
+</script> 
+<script type="text/javascript"> 
+/* <![CDATA[ */
+try {
+var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 1);
+piwikTracker.setDocumentTitle("");
+piwikTracker.setIgnoreClasses("image");
+ 
+piwikTracker.trackPageView();
+piwikTracker.enableLinkTracking();
+} catch( err ) {}
+/* ]]> */
+</script><noscript><p><img src="http://stats.emsexcellence.org/piwik.php?idsite=1" style="border:0" alt=""/></p></noscript> 
+<!-- /Piwik -->
+<a href="mailto:team@emsexcellence.org" id="contact_info"><span>team@emsexcellence.org (206) 451-7294</span></a>
+</body>
+</html>

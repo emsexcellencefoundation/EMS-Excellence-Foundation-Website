@@ -1,0 +1,10 @@
+{% extends "about_base.html" %}
+{% block title %}Acknowledgements | EMS Excellence Foundation{% endblock %}
+{% block content %}
+<h2>Acknowledgements</h2>
+<ul class="general">
+{% for person in people_acknowledged %}
+<li><a href="{{ person.get_url }}">{{ person }}</a></li>
+{% endfor %}
+</ul>
+{% endblock %}

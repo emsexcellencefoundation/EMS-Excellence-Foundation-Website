@@ -1,0 +1,11 @@
+{% extends "about_base.html" %}
+{% block title %}Our People | EMS Excellence Foundation{% endblock %}
+{% block content %}
+<h2>Our People</h2>
+<p>Join our team. Email <a href="mailto:team@emsexcellence.org">team@emsexcellence.org</a> or call (206) 451-7924.</p>
+<ul>
+{% for person in people %}
+<li><strong><a href="">{{ person }}</a>:</strong> {{ person.positions }}</p>
+{% endfor %}
+</ul>
+{% endblock %}
