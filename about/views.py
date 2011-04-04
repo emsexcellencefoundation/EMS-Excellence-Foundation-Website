@@ -3,21 +3,23 @@ import django
 from models import MissionStatement, Acknowledgement, OrganizationPerson
 
 def index(request):
+    mission_statement = MissionStatement.objects.all()[0].statement if MissionStatement.objects.all() else ''
     return render_to_response("homepage.html", {
         "ip_address": request.META['REMOTE_ADDR'],
         "django_version": django.VERSION,
         "meta": request.META.keys(),
         "page": 'home',
-        "mission_statement": MissionStatement.objects.all()[0].statement
+        "mission_statement": mission_statement
     })
 
 def about(request):
+    mission_statement = MissionStatement.objects.all()[0].statement if MissionStatement.objects.all() else ''
     return render_to_response("about.html", {
         "ip_address": request.META['REMOTE_ADDR'],
         "django_version": django.VERSION,
         "meta": request.META.keys(),
         "page": 'about',
-        "mission_statement": MissionStatement.objects.all()[0].statement
+        "mission_statement": mission_statement
     })
 
 def acknowledgements(request):
@@ -46,4 +48,37 @@ def our_people(request):
         "meta": request.META.keys(),
         "page": 'our people',
         "people": OrganizationPerson.objects.all()
+    })
+    
+
+def our_plan(request):
+    return render_to_response("our_plan.html", {
+        "ip_address": request.META['REMOTE_ADDR'],
+        "django_version": django.VERSION,
+        "meta": request.META.keys(),
+        "page": 'our plan',
+    })
+    
+def our_philosophy(request):
+    return render_to_response("our_philosophy.html", {
+        "ip_address": request.META['REMOTE_ADDR'],
+        "django_version": django.VERSION,
+        "meta": request.META.keys(),
+        "page": 'our philosophy',
+    })
+    
+def our_performance(request):
+    return render_to_response("our_performance.html", {
+        "ip_address": request.META['REMOTE_ADDR'],
+        "django_version": django.VERSION,
+        "meta": request.META.keys(),
+        "page": 'our performance',
+    })
+    
+def our_policies(request):
+    return render_to_response("our_policies.html", {
+        "ip_address": request.META['REMOTE_ADDR'],
+        "django_version": django.VERSION,
+        "meta": request.META.keys(),
+        "page": 'our policies',
     })

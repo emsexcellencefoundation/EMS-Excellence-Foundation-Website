@@ -20,26 +20,32 @@
 </head>
 <body>
 <div id="header">
+<div id="h1_container">
 {% if page == 'home' %}<h1 id="home"><span>EMS Census</span></h1>{% else %}<h1><a href="/"><span>EMS Census</span></a></h1>{% endif %}
+</div>
+<div id="navigation_container">
 <ul>
-    {% if page == 'about' %}<li id="about_the_foundation" class="current_page"><span>About the Foundation</span></li>{% else %}<li><a id="about_the_foundation" href="/about"><span>About the Foundation</span></a></li>{% endif %}
+    {% if page == 'about' %}<li id="about_the_foundation" class="current_page first"><span>About the Foundation</span></li>{% else %}<li class="first"><a id="about_the_foundation" href="/about"><span>About the Foundation</span></a></li>{% endif %}
     <li><a id="definition_of_excellence" href="http://definitionofexcellence.org"><span>Definition of Excellence</span></a></li>
     <li><a id="ems_census" href="http://emscensus.org"><span>EMS Census</span></a></li>
         <li><a id="ems_improvement" href="http://emsimprovement.org"><span>EMS Improvement</span></a></li>
 </ul>
+</div>
 </div>
 <div id="sidebar">
 {% block sidebar %}
 
 {% endblock %}
 </div>
+<div id="content_container">
 <div id="content">
 {% block content %}
 
 {% endblock %}
 </div>
-<div id="footer">
-Text is released under the <a rel="license" href="http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a>.
+<div id="footer_container">
+<div id="footer">Text is released under the <a rel="license" href="http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a>. Website source code is <a href="https://github.com/emsexcellencefoundation/EMS-Excellence-Foundation-Website">available on GitHub</a>.</div>
+</div>
 </div>
 <!-- Piwik --> 
 <script type="text/javascript"> 
@@ -62,5 +68,6 @@ piwikTracker.enableLinkTracking();
 </script><noscript><p><img src="http://stats.emsexcellence.org/piwik.php?idsite=1" style="border:0" alt=""/></p></noscript> 
 <!-- /Piwik -->
 <a href="mailto:team@emsexcellence.org" id="contact_info"><span>team@emsexcellence.org (206) 451-7294</span></a>
+<div id="onload_images"><img src="/media/images/h1_hover.png" /></div>
 </body>
 </html>

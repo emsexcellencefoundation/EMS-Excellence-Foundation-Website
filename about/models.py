@@ -50,3 +50,4 @@ class OrganizationPositionFilling(models.Model):
     def __unicode__(self):
         return '%s%s: %s' % ('Interim ' if self.interim else '', self.position.position_name, self.person.persons_name)
     
+#class     
