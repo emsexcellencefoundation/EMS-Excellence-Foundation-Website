@@ -72,7 +72,7 @@ h1 span {
     background:url('../images/bottom_rounded_corners.png') bottom no-repeat;
 }
 
-#sidebar, #footer {
+#sidebar {
     font-size:.9em;
     color:#FFF;
     text-align:left;
@@ -89,4 +89,23 @@ h1 span {
 #footer_container {
     background:url('../images/bottom_background.png') repeat-x;
     height:66px;
+}
+
+#inside_footer_container {
+width:800px;
+margin:0 auto;
+}
+
+#footer {
+padding:20px 200px 20px 20px;
+color:#FFF;
+font-size:.8em;
+}
+
+#footer a:link, #footer a:visited {
+color:#FFF;
+}
+
+#footer a:hover {
+text-decoration:none
 }
