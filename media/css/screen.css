@@ -26,6 +26,24 @@ h1 span {
     display:none;
 }
 
+#account_bar {
+font-size:.8em;
+color:#FFF;
+margin-top:-10px;
+padding:0 0 10px 20px;
+}
+
+#account_bar input {
+border:1px solid #FFF;
+background:#0173CD;
+color:#FFF;
+font-size:.9em;
+}
+
+#sidebar {
+padding-top:20px
+}
+
 .link_section_header span {
     display:block;
     font-weight:bold;
@@ -102,10 +120,10 @@ color:#FFF;
 font-size:.8em;
 }
 
-#footer a:link, #footer a:visited {
+#footer a:link, #account_bar a:link, #account_bar a:visited, #footer a:visited {
 color:#FFF;
 }
 
-#footer a:hover {
+#footer a:hover, #account_bar a:hover {
 text-decoration:none
 }

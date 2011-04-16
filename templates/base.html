@@ -19,8 +19,12 @@
 </script>
 </head>
 <body>
-
-<div id="user_account_bar" style="display:none">
+    <div id="container_A">
+<div id="container_B">
+    
+    <h1 id="home"><span>The EMS Excellence Foundation</span><div id="contact_info">
+    </div></h1>
+    <div id="account_bar">
 {% if is_user_logged_in %}
 <strong>{{ user.first_name }} {{ user.last_name }}</strong> | <a href="">My Profile</a> | <a href="/logout/">Logout</a>
 {% else %}
@@ -30,13 +34,6 @@
 </form> 
 {% endif %}
 </div>
-
-
-    <div id="container_A">
-<div id="container_B">
-    
-    <h1 id="home"><span>The EMS Excellence Foundation</span><div id="contact_info">
-    </div></h1>
     <div id="sidebar">
         <div class="link_section_header"><span>About Us</span>
         <ul>
@@ -59,12 +56,12 @@
         
         
         </div>
-        <div class="link_section_header"><span>Ways to Connect</span>
+        <div class="link_section_header"><span>Connect With Us</span>
         <ul>
-            <li><a href="">Read and comment on our Blog</a></li>
-            <li><a href="">Like and comment on our Facebook Page</a></li>
-            <li><a href="">Follow and reply to us on Twitter</a></li>
-            <li><a href="">Watch and comment on our YouTube videos</a></li>
+            <li><a href="">On our blog</a></li>
+            <li><a href="">On our Facebook page</a></li>
+            <li><a href="">On Twitter</a></li>
+            <li><a href="">On YouTube</a></li>
             </ul>
         
         
