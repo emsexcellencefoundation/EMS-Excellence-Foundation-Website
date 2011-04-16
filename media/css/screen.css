@@ -2,9 +2,27 @@
 
 body
 {
-	background:#FFF url(../images/background.png) repeat-y top right;
+	background:#024c85;
 	text-align:center;
 	font:.9em/1.4 "Helvetica Neue",Arial,Helvetica,sans-serif;
+}
+
+#user_account_bar {
+color:#FFF;
+text-align:center;
+background:#0C71BF;
+font-size:.9em;
+padding:5px 200px 0 0px;
+}
+
+#user_account_bar input {
+border:1px solid #FFF;
+background:#0C71BF;
+color:#FFF;
+}
+
+#user_account_bar a:link, #user_account_bar a:visited {
+color:#FFF;
 }
 
 #header
@@ -89,13 +107,14 @@ margin-left:0
 	width:164px;
 }
 
-#contact_info {
+a#contact_info:link, a#contact_info:visited {
 height:54px;
 width:195px;
-background:url(../images/contact_info.png);
+background:#000 url(../images/contact_info.png);
 top:0;
 right:20px;
-position:absolute;
+position:relative;
+display:none;
 }
 
 /** sidebar **/
@@ -128,7 +147,7 @@ h1 span,#header a span, #onload_images
 	display:none;
 }
 
-h2,h3,p
+h2,h3,h4,h5,p,#sidebar ul
 {
 	margin-bottom:10px;
 }
@@ -143,6 +162,16 @@ h3
 {
 	font-size:1.5em;
 	font-weight:700;
+	clear:both;
+}
+
+h3 strong {
+color:red
+}
+
+h4
+{
+font-size:1.25em;
 }
 
 /** content **/
@@ -151,13 +180,9 @@ h3
 	padding:20px;
 }
 
-#content {
-padding:20px 0 10px 0;
-}
-
 #content_container {
 margin-right:200px;
-	background:url(../images/rounded_right_corner_next_to_header_and_sidebar.png) top right no-repeat;
+	background:#FFF url(../images/rounded_right_corner_next_to_header_and_sidebar.png) top right no-repeat;
 }
 
 #content
@@ -165,15 +190,21 @@ margin-right:200px;
 	margin:0 auto;
 	text-align:left;
 	width:744px;
+	padding-top:10px;
 }
 
-#content a:hover, #sidebar a:hover
+#user_account_bar a:hover, #content a:hover, #sidebar a:hover, #footer a:hover
 {
 	text-decoration:none; 
 }
 
 .chart {
 margin-bottom:10px;
+}
+
+#success_stories {
+width:200px;
+float:right;
 }
 
 /** lists **/
@@ -184,6 +215,10 @@ list-style:square;
 color:#0c71bf;
 }
 
+ul.small {
+font-size:.9em
+}
+
 #ask_yourself {
 font-size:1.3em;
 font-family:serief;
@@ -191,9 +226,15 @@ font-family:serief;
 
 /** footer **/
 
+#bottom_right_rounded_corner {
+height:10px;
+background:url(../images/rounded_right_corner_next_to_footer_and_sidebar.png) bottom right no-repeat;
+}
+
 #footer_container {
+background:#024c85;
+color:#FFF;
 clear:left;
-border-top:1px solid #80bae6;
 font-size:.8em;
 }
 
@@ -201,4 +242,8 @@ font-size:.8em;
 width:744px;
 text-align:left;
 margin:0 auto;
+}
+
+#footer a:link, #footer a:visited {
+color:#FFF;
 }

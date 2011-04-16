@@ -19,8 +19,21 @@
 </script>
 </head>
 <body>
+
+<div id="user_account_bar">
+{% if is_user_logged_in %}
+<strong>{{ user.first_name }} {{ user.last_name }}</strong> | <a href="">My Profile</a> | <a href="/logout/">Logout</a>
+{% else %}
+<form action="/login/" method="post">
+{% csrf_token %}
+{% if login_failed_username %}<strong>Sorry login failed</strong> {% endif %}Username: <input type="" name="username"{% if login_failed_username %} value="{{ login_failed_username }}"{% endif %}></input> Password: <input type="password" name="password"></input><input type="submit" value="Login" />
+</form> 
+{% endif %}
+</div>
+
 <div id="header">
 <div id="h1_container">
+<a href="mailto:team@emsexcellence.org" id="contact_info">lol <span>team@emsexcellence.org (206) 451-7294</span></a>
 {% if page == 'home' %}<h1 id="home"><span>EMS Census</span></h1>{% else %}<h1><a href="/"><span>EMS Census</span></a></h1>{% endif %}
 </div>
 <div id="navigation_container">
@@ -43,8 +56,10 @@
 
 {% endblock %}
 </div>
+<div id="bottom_right_rounded_corner"></div>
 <div id="footer_container">
-<div id="footer">Text is released under the <a rel="license" href="http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a>. Website source code is <a href="https://github.com/emsexcellencefoundation/EMS-Excellence-Foundation-Website">available on GitHub</a>.</div>
+<div id="footer">Text is released under the <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike License</a>. Website source code is <a href="https://github.com/emsexcellencefoundation/EMS-Excellence-Foundation-Website">publicly available on GitHub</a>. Hosted by <a href="http://ep.io">ep.io: smart python hosting</a>
+</div>
 </div>
 </div>
 <!-- Piwik --> 
@@ -67,7 +82,6 @@ piwikTracker.enableLinkTracking();
 /* ]]> */
 </script><noscript><p><img src="http://stats.emsexcellence.org/piwik.php?idsite=1" style="border:0" alt=""/></p></noscript> 
 <!-- /Piwik -->
-<a href="mailto:team@emsexcellence.org" id="contact_info"><span>team@emsexcellence.org (206) 451-7294</span></a>
 <div id="onload_images"><img src="/media/images/h1_hover.png" /></div>
 </body>
 </html>

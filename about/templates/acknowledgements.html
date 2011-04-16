@@ -4,7 +4,7 @@
 <h2>Acknowledgements</h2>
 <ul class="general">
 {% for person in people_acknowledged %}
-<li><a href="{{ person.get_url }}">{{ person }}</a></li>
+<li><span><a href="{{ person.get_url }}">{{ person }}</a> {{ person.affilation }}</span></li>
 {% endfor %}
 </ul>
 {% endblock %}

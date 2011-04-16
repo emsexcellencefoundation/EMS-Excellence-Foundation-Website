@@ -35,10 +35,13 @@ class OrganizationPerson(models.Model):
         return ', '.join(['%s%s' % ('Interim ' if i.interim else '', str(i.position)) for i in OrganizationPositionFilling.objects.filter(person=self, end_date__isnull=True)])
 
 class OrganizationPosition(models.Model):
-    position_name = models.CharField(max_length=20)
+    position_name = models.CharField(max_length=50)
 
     def __unicode__(self):
         return self.position_name    
+        
+    def is_position_open(self):
+        pass
 
 class OrganizationPositionFilling(models.Model):
     position = models.ForeignKey(OrganizationPosition)

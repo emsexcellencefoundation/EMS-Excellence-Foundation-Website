@@ -9,6 +9,9 @@ urlpatterns = patterns('',
     (r'^$', "about.views.index"),
     (r'^about/', include("about.urls")),
     (r'^admin/', include(admin.site.urls)),
+    (r'^delete_position/(?P<position_id>\d+)/$', 'about.views.delete_position'),
+    (r'^login/$', 'about.views.login_user'),
+    (r'^logout/$', 'about.views.logout_user'),
 )
 
 if settings.DEBUG:
