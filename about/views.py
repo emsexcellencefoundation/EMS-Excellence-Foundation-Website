@@ -128,5 +128,8 @@ def login_user(request):
         else: 
             return HttpResponseRedirect(request.META['HTTP_REFERER'] + '?login_failed=disabled') # Return a ’disabled account’ error message 
     else: 
-        return HttpResponseRedirect(request.META['HTTP_REFERER'] + '?login_failed_username=%s' % (username)) # Return an ’invalid login’ error message. 
+        referer = request.META['HTTP_REFERER']
+        if '?' in referer:
+            referer = referer[:referer.find('?')]
+        return HttpResponseRedirect(referer + '?login_failed_username=%s' % (username)) # Return an ’invalid login’ error message. 
 
