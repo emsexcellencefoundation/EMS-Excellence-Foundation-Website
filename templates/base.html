@@ -22,8 +22,8 @@
     <div id="container_A">
 <div id="container_B">
     
-    <h1 id="home"><span>The EMS Excellence Foundation</span><div id="contact_info">
-    </div></h1>
+    <h1 id="home"><span>The EMS Excellence Foundation</span><a id="contact_info" href="mailto:info@emsexcellence.org">
+    </a></h1>
     <div id="account_bar">
 {% if is_user_logged_in %}
 <strong>{{ user.first_name }} {{ user.last_name }}</strong> | <a href="">My Profile</a> | <a href="/logout/">Logout</a>
@@ -33,25 +33,43 @@
 {% if login_failed_username %}<strong>Sorry login failed</strong> {% endif %}Username: <input type="" name="username"{% if login_failed_username %} value="{{ login_failed_username }}"{% endif %}></input> Password: <input type="password" name="password"></input><input type="submit" value="Login" />
 </form> 
 {% endif %}
+<!--
+Our mission is critical. We have to succeed. If we don’t succeed then we need to ensure our successors succeed. 
+
+No one has the complete picture. Not the field
+provider, not the chief, not the medical director, not the dispatcher, not the
+nurse, not the mayor, not the council member, not the billings
+specialist, not the quality assurance specialist, and not the patient. To get the complete
+picture you have to talk to them all.
+
+-->
 </div>
     <div id="sidebar">
         <div class="link_section_header"><span>Learn About Us</span>
         <ul>
             <li><a href="">Acknowledgements</a></li>
             <li><a href="">Who We Are</a></li>
-            
             <li><a href="">Our History</a></li>
             <li><a href="">Our Mission &amp; Strategy</a></li>
+            <!--<li><a href="">Our Commitment to Public Transparency</a></li>-->
+            <li><a href="">Our Organizational Culture &amp; Structure</a></li>
+            
+            
+            
+            
+            
+            <li><a href="">Our Performance</a></li>
+            <!--
             <li><a href="">Our Motivation</a></li>
             <li><a href="">Our Strategy</a></li>
             <li><a href="">Our Core Values</a></li>
             <li><a href="">Our Philosophy</a></li>
             <li><a href="">Our Policies and Procedures</a></li>
-            <li><a href="">Criticism We've Received</a></li>
-            <li><a href="">Our Commitment to Being Publicly Transparent</a></li>
+            <li><a href="">Criticism We've Received</a></li>-->
+            
             </ul>
         </div>
-                <div class="link_section_header"><span>Visit Our Projects</span>
+                <div class="link_section_header"><span>Visit Our Core Projects</span>
         <ul>
             <li><a href="">The Definition of Excellence in EMS</a></li>
             <li><a href="">EMS Census</a></li>
@@ -72,7 +90,8 @@
         </div>
         <div class="link_section_header"><span>Get Involved</span>
         <ul>
-        <li><a href="">Help Create Our Strategy</a></li>
+        <li><a href="">Tell Us Your Opinions</a></li>
+        <!--<li><a href="">Help Create Our Strategy</a></li>-->
             </ul>
         
         

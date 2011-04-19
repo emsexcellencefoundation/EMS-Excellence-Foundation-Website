@@ -52,8 +52,6 @@ padding-top:20px
 }
 
 .link_section_header ul {
-    list-style:square;
-    padding-left:20px;
     margin-bottom:7px;
 }
 
@@ -64,19 +62,17 @@ padding-top:20px
 #sidebar {
     float:right;
     width:160px;
-    padding-left:20px;
 }
 
 #sidebar a:link, #sidebar a:visited {
     display:block;
+    padding-left:20px;
+    background:url('../images/link_arrow.png') 0 6px no-repeat;
 }
 
 #sidebar a:hover {
     text-decoration:none;
-}
-
-#sidebar li {
-    margin-bottom:3px;
+    background:url('../images/current_link_arrow.png') 0 6px no-repeat;
 }
 
 #content_container {
@@ -100,12 +96,20 @@ text-decoration:none;
     text-align:left;
 }
 
-#contact_info {
+#contact_info:link, #contact_info:visited {
     float:right;
     display:block;
     width:160px;
     height:66px;
     background:url('../images/contact_info.png');
+}
+
+#contact_info:hover {
+    float:right;
+    display:block;
+    width:160px;
+    height:66px;
+    background:url('../images/contact_info_hover.png');
 }
 
 #footer_container {
