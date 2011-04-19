@@ -1,50 +1,5 @@
 {% extends "base.html" %}
 {% block title %}The EMS Excellence Foundation{% endblock %}
-{% block sidebar %}
-<ul>
-<li><a href="http://blog.emsexcellence.org">Read our blog</a></li>
-<li><a href="[[NEEDS LINK]]">Fan us on Facebook</a></li>
-<li><a href="[[NEEDS LINK]]">Follow us on Twitter</a></li>
-<li><a href="[[NEEDS LINK]]">Watch us on YouTube</a></li>
-</ul><!--
-<ul>
-<li><a href="/for/public/">For the General Public</a></li>
-<li><a href="/for/media/">For the Media</a></li>
-<li><a href="/for/field_providers/">For Field Providers</a></li>
-<li><a href="/for/dispatchers/">For Dispatchers</a></li>
-<li><a href="/for/ems_administrators/">For EMS Administrators</a></li>
-<li><a href="/for/former_ems_professionals/">For Former EMS Professionals</a></li>
-<li><a href="/for/public_relations_students/">For Public Relations Students</a></li>
-<li><a href="/for/police_officers/">For Police Officers</a></li>
-<li><a href="/for/firefighters/">For Firefighters</a></li>
-<li><a href="/for/disaster_responders/">For Disaster Responders</a></li>
-<li><a href="/for/hospital_providers/">For Hospital Providers</a></li>
-</ul>
--->
-{% endblock %}
 {% block content %}
-<h2>Welcome! We're commited to making Out-of-Hospital Emergency Care consistently excellent.</h2>
-<p>The <strong>Emergency Medical Services Excellence Foundation</strong> is defining excellence, collecting data, and empowering people to improve out-of-hospital emergency care.</p>
-<h3>Survive in One Community But <strong>Die</strong> in Another</h3>
-<p>In one community units are dispatched in fourty seconds to a cardiac arrest, but in another community it takes two minutes. In one community a bystander trained by the fire department is performing CPR, but in another community no one is. </p>
-<div style="width:594px; margin:0 auto; text-align:center;font-size:.9em;"><p style="text-align:left;font-family:serif;">Hospital discharge alive rates for EMS-treated bystander-witnessed shockable cardiac arrest likely caused by heart disease</p><img src="/media/images/bystander_witnessed_shockable_cardiac_arrest_survival_rates.png" class="chart" /><p style="text-align:left;font-family:serif;">See <a href="">list of sources and discussion of accuracy and fairness</a>. Download the <a href="">Excel spreadsheet</a>.</p></div>
-<div id="success_stories">
-<h4>Success Stories</h4>
-<ul></ul>
-</div>
-<h3>Become a Director</h3>
-<p>Each position requires five hours of work a week. Right now we can't pay anyone. Suggest ways to <a href="/about/fund_raising/">raise money to pay people</a>.</p>
-{% if is_user_logged_in %}
-<form action="/" method="post"> 
-{% csrf_token %}
-{{ add_position_form.as_p }}
-<input type="submit" value="Submit" /> 
-</form> 
-{% endif %}
-
-<ul class="general small">
-{% for position in open_positions %}
-<li><a href="">Become the {{ position }}</a> {% if is_user_logged_in %}[<a href="/delete_position/{{ position.id }}">Delete Position</a>]{% endif %}</li>
-{% endfor %}
-</ul>
+<p>Welcome to the <strong><abbr title="Emergency Medical Services">EMS</abbr> Excellence Foundation</strong>. We are an international non-profit organization determined to make the delivery of out-of-hospital emergency care consistently excellent from community to community by <a href="http://definitionofexcellence.org">defining excellence</a>, <a href="http://emscensus.org">collecting data</a>, and <a href="http://emsimprovement.org">empowering people</a>.</p>
 {% endblock %}

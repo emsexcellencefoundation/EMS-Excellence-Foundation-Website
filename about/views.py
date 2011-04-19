@@ -2,14 +2,13 @@
 
 from django.shortcuts import render_to_response
 import django
-from models import MissionStatement, Acknowledgement, OrganizationPerson, OrganizationPosition
+from models import Acknowledgement, OrganizationPerson, OrganizationPosition
 from forms import AddPositionForm
 from  django.template import RequestContext
 from django.http import HttpResponseRedirect, HttpResponse 
 from django.contrib.auth import authenticate, login, logout 
 
 def index(request):
-    mission_statement = MissionStatement.objects.all()[0].statement if MissionStatement.objects.all() else ''
     add_position_form = ''
     if request.user.is_authenticated():
         if request.method == 'POST': # If the form has been submitted... 
@@ -26,7 +25,6 @@ def index(request):
         "django_version": django.VERSION,
         "meta": request.META.keys(),
         "page": 'home',
-        "mission_statement": mission_statement,
         "open_positions": OrganizationPosition.objects.all(),
         "add_position_form": add_position_form,
         "is_user_logged_in": request.user.is_authenticated(),
@@ -114,8 +112,8 @@ def delete_position(request, position_id):
     return HttpResponseRedirect('/')
     
 def logout_user(request):
-    logout(request)
-    return HttpResponseRedirect(request.META['HTTP_REFERER'])
+    logout(request) 
+    return HttpResponseRedirect(request.META['HTTP_REFERER']) # Redirect back to the page the user logged out from
     
 def login_user(request):
     username = request.POST['username'] 

@@ -85,6 +85,10 @@ padding-top:20px
     text-align:left;
 }
 
+#content a:hover {
+text-decoration:none;
+}
+
 #content {
     padding:20px;
     background:url('../images/bottom_rounded_corners.png') bottom no-repeat;
@@ -126,4 +130,8 @@ color:#FFF;
 
 #footer a:hover, #account_bar a:hover {
 text-decoration:none
+}
+
+abbr {
+border-bottom: 1px dotted #000;
 }

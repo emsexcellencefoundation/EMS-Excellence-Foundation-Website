@@ -1,13 +1,6 @@
 from django.db import models
 from django.db.models import get_model
 
-class MissionStatement(models.Model):
-    datetime = models.DateTimeField(auto_now=True)
-    statement = models.CharField(max_length=1000)
-
-    def __unicode__(self):
-        return '%s: %s' % (self.datetime, self.statement)
-
 class Acknowledgement(models.Model):
     persons_name = models.CharField(max_length=50)
     affilation = models.CharField(max_length=500)
